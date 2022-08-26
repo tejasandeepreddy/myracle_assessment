@@ -1,0 +1,29 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/subject" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{subject._id }}">
+    <div class="form-group">
+        <label>Subject Name</label>
+        <input type="text" class="form-control" name="subjectName" placeholder="Subject Name" value="{{subject.subjectName}}">
+        
+    </div>
+    <div class="form-group">
+        <label>Subject Id</label>
+        <input type="text" class="form-control" name="subjectId" placeholder="Subject Id" value="{{subject.subjectId}}">
+        
+    </div>
+    <div class="form-group">
+        <label>Subject Code</label>
+        <input type="text" class="form-control" name="subjectCode" placeholder="Subject Code" value="{{subject.subjectCode}}">
+        
+    </div>
+    <div class="form-group">
+        <label>Professor</label>
+        <input type="text" class="form-control" name="professor" placeholder="Professor Name" value="{{subject.professor}}">
+        
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">Submit</button>
+        <a href="/subject/list" class="btn btn-secondary">View list</a>
+    </div>
+</form>

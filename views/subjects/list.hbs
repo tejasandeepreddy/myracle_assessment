@@ -1,0 +1,27 @@
+
+<h3><a class="btn btn-secondary" href="/subject"><i class="fa fa-plus"></i>Create New</a>Subject list</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Subject Id</th>
+            <th>Subject Name</th>
+            <th>Subject Code</th>
+            <th>Professor</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.subjectId}}</td>
+            <td>{{this.subjectName}}</td>
+            <td>{{this.subjectCode}}</td>
+            <td>{{this.professor}}</td>
+            <td>
+                <a href="/subject/{{this._id}}">Edit</a>
+                <a href="/subject/delete/{{this._id}}" onclick="return confirm('Are you sure?');">Delete</a>
+                </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
